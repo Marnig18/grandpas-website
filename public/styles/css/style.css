@@ -1,0 +1,130 @@
+*{
+  box-sizing: border-box;
+}
+
+:root{
+  --Special-Elite: 'Special Elite', cursive;
+  --Bilbo: 'Bilbo Swash Caps', cursive;
+  -- Open-Sans: 'Open Sans', sans-serif;
+
+  --Black: #343434;
+  --Grey: #8E8B82;
+  --Beige: #E9DCBE;
+  --White: #F3F3F3;
+
+}
+
+.row{
+  margin-bottom: 0;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+
+/* Header */
+.header{
+  background-color: var(--Black);
+  border-bottom: 8px solid var(--Beige)
+}
+
+.nav{
+
+}
+
+.nav li{
+  display: inline;
+  float: right;
+  list-style: none;
+  padding: 0 10px;
+  font-family: var(--Bilbo);
+  font-size: 1.7em;
+}
+
+.nav li:hover{
+
+  font-size: 1.9em;
+}
+
+.nav li a{
+  color: var(--White);
+}
+
+/* .nav li a:hover{
+    text-decoration: none;
+} */
+
+
+
+.title-name{
+  font-family: var(--Special-Elite);
+  font-size: 3em;
+  padding-top: 3%;
+  line-height: normal;
+  color: var(--White)
+
+}
+
+
+.title-art{
+  font-family: var(--Special-Elite);
+  font-size: 1.8em;
+  margin-bottom: 0;
+  color: var(--White);
+
+}
+
+
+/* Landing Page */
+
+.landing-container img{
+  border: 10px solid var(--Beige)
+}
+
+.large-landing-image,
+.medium-landing-image{
+  margin-top: 5%;
+
+}
+
+.large-landing-image{
+  padding-left: 12%;
+}
+
+.small-landing-image{
+  padding-left: 10%;
+  margin-bottom: 5%;
+}
+
+.landing-container{
+  background-color: var(--Black);
+
+}
+.landing-link{
+  color: var(--Beige);
+  font-size: 2em;
+  font-family: var(--Bilbo)
+}
+
+.landing-link:hover{
+  color: var(--WH);
+  font-size: 2.1em;
+}
+
+
+
+
+
+
+
+textarea{
+  height: auto;
+}
+
+
+
+
+.gallery-links{
+  color: black;
+}

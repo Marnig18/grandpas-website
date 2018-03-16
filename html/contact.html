@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Granpas-Website</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+		<link href="/styles/site.css" rel="stylesheet">
+		<link href="/styles/css/normalize.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link href="/styles/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
+
+
+
+		  <!-- This file provides the default styling for the KeystoneJS Content Editor -->
+			<!-- - only renders when user is logged in and admin
+		{{{isAdminEditorCSS user}}}
+<!
+		 HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+		//- Safely remove this block if you are not targeting IE8
+		[if lt IE 9]
+			<script src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.js"></script>
+			<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+		[endif] -->
+
+	  <body>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 offset-sm-2">
+            {{# if enquirySubmitted}}
+						<h3> Thanks for getting in touch.</h3>
+						<form method='post'>
+							<input type="hidden" name="action" value="contact">.
+	            <div class="row">#
+	              <div class="input-field col s6{{#if validationErrors.first_name}}has-error{{ #/if}}">
+	               <input id="first_name" type="text" class="validate" value="{{formData.first_name}}">
+	               <label for="first_name">First Name</label>
+	              </div>
+	              <div class="input-field col s6 {{#if validationErrors.last_name}}has-error{{#/if}}">
+	               <input id="last_name" type="text" class="validate" value="{{formData.last_name}}">
+	               <label for="last_name">Last Name</label>
+	              </div>
+	            </div>
+	            <div class="row">
+	              <div class="input-field col s12 {{#if validationErrors.email}}has-error{{#/if}}">
+	                <input id='email' type='email' class="validate" value="{{formData.email}}">
+	                <label for="email">Email</label>
+	              </div>
+	            </div>
+	            <div class="row">
+	              <div class="input-field col s12 {{#if validationErrors.phone}}has-error{{#/if}}">
+	                <input id="phone" type="tel" class="validate" value="{{formData.phone}}">
+	                <label for="phone">Phone</label>
+	              </div>
+	            </div>
+	          <div class="row">
+	            <div class="form-group col s12 {{#if validationErrors.message}}has-error{{#/if}}">
+	                <label for="textarea">Message</label>
+	                <textarea class="form-control" id="textarea" rows="10" value="{{formData.message}}"{{formData.med=}}></textarea>
+	            </div>
+	          </div>
+	          <div class="row">
+	            <button class="btn" type='submit'>Submit</button>
+	          </div>
+					</form>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+		<div class="container">
+			<h1>Contact Us</h1>
+		</div>
+			<div class="container">
+				<div class="row">
+
+			</div>
+		</div>
+
+
+
+
+
+		<div class="col-sm-8 col-md-6">
+			{{#if enquirySubmitted}}
+			<h3>Thanks for getting in touch.</h3>
+			{{else}}
+			<form method="post">
+				<input type="hidden" name="action" value="contact">
+				<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+					<label>Name</label>
+					<input type="text" name="name.full"  class="form-control" value="{{formData.[name.full]}}">
+				</div>
+				<div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
+					<label>Email</label>
+					<input type="email" name="email" class="form-control" value="{{formData.email}}">
+				</div>
+				<div class="form-group">
+					<label>Phone</label>
+					<input type="text" name="phone" placeholder="(optional)" class="form-control" value="{{formData.phone}}">
+				</div>
+				<div class="form-group {{#if validationErrors.enquiryType}}has-error{{/if}}">
+					<label>What are you contacting us about?</label>
+					<select name="enquiryType" class="form-control">
+						<option value="">(select one)</option>
+						{{#each enquiryTypes}}
+						<option value="{{value}}">{{label}}</option>
+						{{/each}}
+					</select>
+				</div>
+				<div class="form-group {{#if validationErrors.message}}has-error{{/if}} ">
+					<label>Message</label>
+					<textarea name="message" placeholder="Leave us a message..." rows="4" class="form-control">{{formData.message}}</textarea>
+				</div>
+				<div class="form-actions">
+					<button type="submit" class="btn btn-primary">Send</button>
+				</div>
+			</form>
+			{{/if}}
+		</div>
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>    </body>
+</html>

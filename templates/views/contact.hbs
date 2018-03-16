@@ -1,0 +1,53 @@
+<div class="container">
+	<h1>Contact Us</h1>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-8 offset-sm-2">
+			{{# if enquirySubmitted}}
+			<h3> Thanks for getting in touch.</h3>
+				{{else}}
+				<form method='post'>
+					<input type="hidden" name="action" value="contact">
+					<div class="row">
+						<div class="input-field col s6{{#if validationErrors.firstname}}has-error{{/if}}">
+						 <input id="firstname" type="text"
+						 name="firstname"
+						 class="validate" value="{{formData.firstname}}">
+						 <label for="firstname">First Name</label>
+						</div>
+						<div class="input-field col s6 {{#if validationErrors.lastname}}has-error{{/if}}">
+						 <input id="lastname" type="text"
+						 name="lastname"
+						 class="validate" value="{{formData.lastname}}">
+						 <label for="last_name">Last Name</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12 {{#if validationErrors.email}}has-error{{/if}}">
+							<input id='email' type='email' name="email" class="validate" value="{{formData.email}}">
+							<label for="email">Email</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12 {{#if validationErrors.phone}}has-error{{/if}}">
+							<input id="phone" type="tel"
+							name="phone"
+						 class="validate" value="{{formData.phone}}">
+							<label for="phone">Phone</label>
+						</div>
+					</div>
+				<div class="row">
+					<div class="form-group col s12 {{#if validationErrors.message}}has-error{{/if}}">
+							<label for="textarea">Message</label>
+							<textarea class="form-control" id="textarea" rows="10" value="{{formData.message}}"
+							name="message">{{formData.message}}</textarea>
+					</div>
+				</div>
+				<div class="row form-actions">
+					<button class="btn" type='submit'>Submit</button>
+				</div>
+			</form>
+			{{/if}}
+		</div>
+	</div>
