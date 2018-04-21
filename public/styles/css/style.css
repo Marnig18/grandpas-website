@@ -5,7 +5,7 @@
 :root{
   --Special-Elite: 'Special Elite', cursive;
   --Bilbo: 'Bilbo Swash Caps', cursive;
-  -- Open-Sans: 'Open Sans', sans-serif;
+  --Open-Sans: 'Open Sans', sans-serif;
 
   --Black: #343434;
   --Grey: #8E8B82;
@@ -26,12 +26,10 @@ a:hover{
 /* Header */
 .header{
   background-color: var(--Black);
-  border-bottom: 8px solid var(--Beige)
+  border-bottom: 8px solid #A71D31
 }
 
-.nav{
 
-}
 
 .nav li{
   display: inline;
@@ -62,7 +60,8 @@ a:hover{
   font-size: 3em;
   padding-top: 3%;
   line-height: normal;
-  color: var(--White)
+  color: var(--White);
+  padding-left: 10px;
 
 }
 
@@ -72,14 +71,22 @@ a:hover{
   font-size: 1.8em;
   margin-bottom: 0;
   color: var(--White);
+  padding-left: 10px;
 
+}
+
+.page-title{
+  font-family: var(--Special-Elite);
+  font-size: 2.5em;
+  padding: 2% 0 2% 10px;
+  color: var(--White)
 }
 
 
 /* Landing Page */
 
 .landing-container img{
-  border: 10px solid var(--Beige)
+  border: 10px solid var(--Grey)
 }
 
 .large-landing-image,
@@ -124,7 +131,164 @@ textarea{
 
 
 
+/* Gallery */
+
+
+.gallery{
+  background-color: var(--Black);
+
+}
 
 .gallery-links{
-  color: black;
+  color: var(--White);
+}
+
+.gallery-links:hover{
+  color: var(--White);
+
+}
+
+
+.gallery-word{
+  font-family: var(--Open-Sans);
+  font-weight: lighter;
+}
+
+.gallery-word:hover{
+  font-size: 1.7em;
+}
+
+
+
+/*Contact Page  */
+
+.contact{
+background-color: var(--Black)
+}
+
+
+.form{
+  border: 8px solid var(--Grey);
+  background-color: var(--White);
+  margin-bottom: 5%;
+  padding: 3% 5%;
+}
+
+.form label,
+.form input{
+  color: var(--Black);
+  font-family: var(--Open-Sans);
+}
+
+.btn{
+  background-color: #A71D31;
+  font-family: var(--Open-Sans);
+  text-transform: none;
+}
+
+.btn:hover{
+  background-color: #d2253e;
+
+}
+
+
+#firstname:focus,
+#lastname:focus,
+#email:focus,
+#phone:focus{
+   border-bottom: 1px solid #8E9AAF;
+    box-shadow: 0 1px 0 0 #8E9AAF;
+}
+
+#firstname:focus + label,
+#lastname:focus + label,
+#email:focus + label,
+#phone:focus + label
+{
+  color: #8E9AAF;
+}
+
+
+
+/*Galleries  */
+
+
+
+.g-images{
+  margin-bottom: 5%;
+  border-radius: 2%;
+  box-shadow: 19px -16px 15px -31px rgba(30,30,30,1)
+
+}
+
+
+/* .shadow{
+
+  height: 250px;
+  width: 250px;
+  box-shadow: inset 0 0 50px 5px rgba(60,60,60, 0.3);
+  position: absolute;
+  z-index: 1
+} */
+
+
+
+.modal{
+  width: 400px;
+  height: 400px;
+}
+
+/* .modal-open .modal{
+  overflow-y: none;
+} */
+
+.modal-buttons{
+  max-height: 250px;
+  max-width: 250px;
+  position: absolute;
+  top: auto;
+  z-index: 2;
+
+}
+
+#modalImage{
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  bottom: auto;
+
+}
+
+.modal-dialog{
+  margin: 0;
+  height: inherit;
+  width: inherit;
+}
+
+
+.modal-body{
+  width: inherit;
+  height: inherit;
+  padding: 0px;
+  position: absolute;
+  top: auto;
+
+}
+
+.modal .modal-content{
+  padding: 0px;
+  position: absolute;
+  top: auto;
+  height: inherit;
+  width: inherit;
+}
+
+
+
+
+.gallery-name{
+  font-family: var(--Special-Elite);
+  color: var(--White);
+  padding-top: 3%;
+  padding-left: 1%;
 }

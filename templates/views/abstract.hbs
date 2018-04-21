@@ -1,28 +1,26 @@
-<div class="container">
-	<h1>Gallery</h1>
-</div>
-<div class="container">
+
+<div class="container-fluid gallery">
 	<!-- if galleries -->
 	{{#if galleries}}
 		{{#each galleries}}
-		<h2>{{name}}
-			<div class="pull-right text-muted">19th May 2014</div>
+		<h2 class='gallery-name'>{{name}}
 		</h2>
 		<div class="row gallery-images">
+			<div class="row">
 				{{#if heroImage}}
-				<div class="col-sm-4 col-md-4 gallery-image">
-					<img src="{{cloudinaryUrl heroImage width='680' height='680'}}" class="img-rounded">
+				<div class="col-sm-6 col-md-4 col-lg-3 gallery-image d-flex justify-content-center">
+					<img class="g-images" src="{{cloudinaryUrl heroImage width='250' height='250'}}" class="img-rounded" data-image="{{cloudinaryUrl heroImage width='250' height='250'}}">
+					<!-- <div class='shadow'></div> -->
 				</div>
 				{{/if}}
-				<div class="col-sm-8 col-md-8">
-					<div class="row">
-						{{#each images}}
-						<div class="col-xs-4 col-sm-4 col-md-3 gallery-image">
-							<img src="{{cloudinaryUrl width='300' height='300'}}" class="img-rounded">
-						</div>
-						{{/each}}
-					</div>
+				{{#each images}}
+				<div class="col-sm-6 col-md-4 col-lg-3 gallery-image d-flex  justify-content-center">
+					<img class="g-images" src="{{cloudinaryUrl width='250' height='250'}}" data-image="{{cloudinaryUrl  width='250' height='250'}}" class="img-rounded">
+					<div class="shadow"></div>
 				</div>
+				{{/each}}
+
+			</div>
 		</div>
 		{{/each}}
 	{{else}}
@@ -30,3 +28,67 @@
 	<h3 class="text- class=""muted">There are no image galleries yet.</h3>
 	{{/if}}
 </div>
+
+
+
+
+<div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModals" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+	   		<img class="img-rounded modal-image" id="modalImage">
+        <button type="button" class="btn btn-secondary modal-buttons" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script>
+
+  //
+	// $( document ).ready(function() {
+
+		const images = document.querySelectorAll('.g-images')
+		console.log(images)
+
+    //
+		// $('#imageModal').on('shown.bs.modal',function(e){
+    //
+    //
+    //
+		// })
+		//
+
+
+		function showModal(e){
+			console.log(e)
+			let src = e.srcElement.dataset.image
+			console.log(src)
+			let modalImg = document.getElementById('modalImage')
+			console.log(modalImg)
+			modalImg.setAttribute('src', src)
+			// modalImg.setAttribute('height', "350px")
+			// modalImg.setAttribute('width', "350px")
+			console.log(modalImg)
+			$('#imageModal').modal('toggle')
+
+
+			//
+
+
+
+			// let image = document.querySelector('img[data-image=]'
+
+		}
+
+
+
+
+
+		images.forEach(image=>image.addEventListener('click', showModal))
+
+	// });
+
+</script>

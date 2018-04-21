@@ -13,7 +13,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 		<link href="/styles/css/style.css" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps|Open+Sans|Special+Elite" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps|Open+Sans:300|Special+Elite" rel="stylesheet">
 
 
 		{{!-- This file provides the default styling for the KeystoneJS Content Editor
@@ -31,12 +31,12 @@
 	<body>
 		<div class="container-fluid header">
 			<div class="row">
-				<div class="col offset-sm-1">
+				<div class="col">
 					<h2 class="title-name">Robert Gross</h3>
 				</div>
 			</div>
 			<div class="row second-header-row">
-				<div class="col-sm-2 offset-sm-1">
+				<div class="col-sm-3 offset-sm-1">
 					<p class="title-art">Art</p>
 				</div>
 				<div class="col-s-3 offset-sm-5 clearfix">
@@ -103,16 +103,17 @@
 			//- and the KeystoneJS Content Editor. If you are not targeting IE8,
 			//- you can upgrade to 2.1.4 (also bundled) for better performance.
 		--}}
-		<script src="/js/jquery/jquery-1.11.3.min.js"></script>
+
 		{{!--
 			//- Customise which Bootstrap javascript files are served by including
 			//- them specifically here, instead of bootstrap-3.3.5.min.js
 		--}}
 		{{!-- <script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script> --}}
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
+
+
 
 		{{{isAdminEditorJS user}}}
 	</body>
